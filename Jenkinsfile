@@ -2,12 +2,12 @@ pipeline{
 	agent any
 	
 	stages {
-		stage 'Checagem Git'
+		stage ('Checagem Git')
 		  node('slave') {
 		  deleteDir()
 		  checkout scm
 		}
-		stage 'Build Projeto'
+		stage ('Build Projeto')
 		  node('slave') {
 		  git credentialsId: 'github', url: 'https://github.com/FlavioAlmeida53/modulos-admin/tree/master/delivery-eureka-service/delivery-eureka-service'
 		  sh 'mvn clean install'
