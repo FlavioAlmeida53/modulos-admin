@@ -9,7 +9,7 @@ pipeline{
 		}
 		
 		stage('Transferindo para o repositório'){
-			stages('Download Maven'){
+			
 				stage('Download das Libs'){
 					steps{ echo "Libs do projeto" }
 				}
@@ -18,12 +18,10 @@ pipeline{
 				}
 				stage('Gerar Jar'){
 					steps{ echo "Compile do projeto" }
-				}
-			}	
+				}	
 		}
 		
 		stage('Publicando a aplicação em Dev'){
-			stages('Stop Dev'){
 				stage('Parando sistema'){
 					steps{
 						  echo "Sistema Pusado"
@@ -39,11 +37,9 @@ pipeline{
 						  echo "Sistema sendo executado em dev"
 					}
 				}
-			}
 		}
 		
 		stage('Publicando a aplicação em Homologação'){
-			stages('Stop Hom'){
 				stage('Parando sistema'){
 					steps{
 						  echo "Sistema Pusado"
@@ -59,7 +55,6 @@ pipeline{
 						  echo "Sistema sendo executado em hom"
 					}
 				}
-			}
 		}
 	}
 }
