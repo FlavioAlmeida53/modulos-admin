@@ -8,8 +8,9 @@ pipeline{
 		  checkout scm
 			}
 		}
+		stages{
 		stage ('Processando Projeto'){
-	stages{
+	
 		stage ('Build Teste Projeto'){
 		  steps('slave') {
 		  git credentialsId: 'github', url: 'https://github.com/FlavioAlmeida53/modulos-admin/tree/master/delivery-eureka-service/delivery-eureka-service'
