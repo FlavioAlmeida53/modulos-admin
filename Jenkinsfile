@@ -10,7 +10,7 @@ pipeline{
 		stage('Checkout') {
 			steps {
 				slackSend channel: 'jenkins-ci', color: '#33AFFF', message: "*STARTED*: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'\n *More info at:* ${env.BUILD_URL}", teamDomain: 'devteam', tokenCredentialId: 'slack'
-     				git branch: 'dev', credentialsId: 'github', url: 'https://github.com/FlavioAlmeida53/projetoJucesp'
+     				git branch: 'dev', credentialsId: 'github', url: 'https://github.com/FlavioAlmeida53/modulos-admin/tree/master/delivery-eureka-service/delivery-eureka-service'
 			}
 		}
 		stage('Build + Unit tests') {
