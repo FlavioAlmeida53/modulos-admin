@@ -7,9 +7,8 @@ pipeline{
 				echo "Copiando arquivos do Git"
 			}
 		}
-		
-		stage('Transferindo para o repositório'){
-			
+	}
+	stages {	
 				stage('Download das Libs'){
 					steps{ echo "Libs do projeto" }
 				}
@@ -18,10 +17,9 @@ pipeline{
 				}
 				stage('Gerar Jar'){
 					steps{ echo "Compile do projeto" }
-				}	
-		}
-		
-		stage('Publicando a aplicação em Dev'){
+				}
+			}
+	stages {	
 				stage('Parando sistema'){
 					steps{
 						  echo "Sistema Pusado"
@@ -38,8 +36,7 @@ pipeline{
 					}
 				}
 		}
-		
-		stage('Publicando a aplicação em Homologação'){
+		stages {
 				stage('Parando sistema'){
 					steps{
 						  echo "Sistema Pusado"
@@ -55,6 +52,5 @@ pipeline{
 						  echo "Sistema sendo executado em hom"
 					}
 				}
-		}
-	}
+			}
 }
