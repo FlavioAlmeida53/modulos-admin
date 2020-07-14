@@ -10,7 +10,7 @@ pipeline{
 		
 		stage('Transferindo para o repositório'){
 			stages('Download Maven'){
-				stage(Download das Libs){
+				stage('Download das Libs'){
 					steps{ echo "Libs do projeto" }
 				}
 				stage('Gerando o Package'){
