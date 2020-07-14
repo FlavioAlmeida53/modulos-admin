@@ -15,23 +15,23 @@ pipeline{
 		}
 		stage('Build + Unit tests') {
 			steps {
-				/* colocar os jobs do estágio de Build e testes unitários aqui */
+				echo "Sistema sendo copiado para paste dev"
 			}
 		}
 		stage('Archiving Reports') {
 			steps {
-				/* colocar os jobs do estágio de arquivamento de relatórios aqui */
+				echo "Sistema sendo copiado para paste dev"
 			}
 		}
 		stage('BDD tests job'){
 			steps {
-				/* colocar os jobs do estágio de execução de BDD aqui */
+				echo "Sistema sendo copiado para paste dev"
 			}
 		}
 	}
 	post {
 		always {
-			/* colocar as ações do bloco post aqui */
+			
 		}
 	}
 }
