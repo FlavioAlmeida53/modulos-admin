@@ -2,12 +2,12 @@ pipeline{
 	agent any
 	stages {
 		stage('Compilando Git'){
-			steep{
+			steps{
 				echo "Copiando arquivos do Git"
 			}
 		}
 		stage('Gerando Jar'){
-			steep{
+			steps{
 			        echo "Executando download dos Jar"
 			}
 		}
