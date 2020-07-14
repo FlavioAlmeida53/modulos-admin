@@ -28,7 +28,7 @@ pipeline{
 		}
 		stage('BDD tests job'){
 			 steps {
-				git credentialsId: 'github', url: 'https://github.com/murillowelsi/repos/bdd-tests'
+				git credentialsId: 'github', url: 'https://github.com/FlavioAlmeida53/modulos-admin/tree/master/delivery-eureka-service/delivery-eureka-service'
 				sh 'mvn clean install'
 				cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'target/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1                       
 		         }
