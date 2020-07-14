@@ -8,7 +8,7 @@ pipeline{
 		  checkout scm
 			}
 		}
-		stages{
+		
 		stage ('Processando Projeto'){
 	
 		stage ('Build Teste Projeto'){
@@ -26,6 +26,5 @@ pipeline{
 			}
 		    }
 		}
-	    }
 	}
 }
