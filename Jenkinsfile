@@ -16,7 +16,7 @@ pipeline{
 		}
 		stage('Build + Unit tests') {
 			steps {
-			   sh 'mvn clean test'"
+			   sh 'mvn clean test'
 			}
 		}
 		stage('Archiving Reports') {
